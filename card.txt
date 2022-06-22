@@ -1,0 +1,43 @@
+ <style>
+        img {
+            width: 160px;
+            height: 300px;
+            border-radius: 5px;
+        }
+    </style>
+
+
+<div class="row row-cols-1 row-cols-md-5 g-4 m-5">
+        <div class="col">
+            <div class="card p-1">
+                <img src="./img/livro-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <label>titulo</label>
+                    <br>
+                    <label>autor</label>
+                    <br>
+                    <a href="#" class="btn btn-primary">Página do Livro</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    $result = 'SELECT * FROM livros';
+    $result = mysqli_query($conn, $result);
+    while($livros = mysqli_fetch_assoc($result)){
+       echo '<div class="row row-cols-1 row-cols-md-5 g-4 m-5">
+        <div class="col">
+            <div class="card p-1">
+                <img src="./img/livro-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <label>titulo</label>
+                    <br>
+                    <label>autor</label>
+                    <br>
+                    <a href="#" class="btn btn-primary">Página do Livro</a>
+                </div>
+            </div>
+        </div>
+    </div>';
+    }

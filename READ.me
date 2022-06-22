@@ -1,0 +1,44 @@
+Material de apoio
+https://github.com/Gutoneitzke/sistema-cadastro-php
+
+Nome do Banco de Dados: biblioteca;
+Tabelas: adm(informações para logar como adm), livros(livros cadastrados);
+
+adm:
+id = idadm
+email;
+senha;
+
+livros:
+id = idlivros
+titulo;
+autor;
+editora;
+data_pub;
+paginas;
+sinopse.
+
+COMANDOS MYSQL (Workbench)
+
+CREATE SCHEMA `biblioteca` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ;
+
+CREATE TABLE `biblioteca`.`adm` (
+  `idadm` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(100) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idadm`));
+
+  INSERT INTO adm (email, senha) VALUES ('etec@etec.com','etec')
+
+
+CREATE TABLE `biblioteca`.`livros` (
+  `idlivros` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(85) NOT NULL,
+  `autor` VARCHAR(45) NOT NULL,
+  `editora` VARCHAR(45) NOT NULL,
+  `data_pub` DATE NOT NULL,
+  `paginas` INT NOT NULL,
+  `sinopse` LONGTEXT NOT NULL,
+  `nome_img` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`idlivros`));
+
